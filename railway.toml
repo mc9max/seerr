@@ -1,0 +1,16 @@
+[build]
+  builder = "DOCKERFILE"
+  dockerfilePath = "Dockerfile"
+  watchPatterns = ["Dockerfile"]
+
+[deploy]
+  healthcheckPath = "/"
+  healthcheckTimeout = 120
+  numReplicas = 1
+  restartPolicyType = "ON_FAILURE"
+  restartPolicyMaxRetries = 3
+
+[[volumes]]
+  name = "seerr_config"
+  mountPath = "/app/config"
+  sizeGB = 1
