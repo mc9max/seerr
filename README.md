@@ -2,9 +2,9 @@
 
 Request and discover movies & TV shows for your Jellyfin, Plex, or Emby library — from one clean web interface. Seerr is the community successor to Overseerr and Jellyseerr: search, request, manage, and get notified, all self-hosted.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/deploy/seerr?utm_campaign=seerr)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/deploy/seerr-1?utm_campaign=seerr)
 
-## Deploy and Host
+# Deploy and Host
 
 One click. No variables to configure. Railway provisions a single service with a 1 GB `/app/config` volume and starts Seerr. Open the public URL and run the setup wizard.
 
