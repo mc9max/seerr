@@ -15,13 +15,16 @@
 #     both target the EXPOSEd port.
 #   * No in-container HEALTHCHECK (no curl/wget guarantee) — Railway's
 #     external healthcheck (healthcheckPath="/") runs instead.
+#   * Port: Railway injects its own PORT env at runtime (default service port
+#     8080), which overrides any Dockerfile ENV. The wrapper therefore does
+#     NOT set PORT — it listens on whatever Railway provides, defaulting to
+#     8080. Railway's reverse proxy and external healthcheck target the
+#     service port (8080).
 FROM seerr/seerr@sha256:27602401178d54f1964442287b9f23f67a3fa2252645ee8065839ea1c3f69e45
 
 USER root
 
-ENV PORT="5055"
-
-EXPOSE 5055
+EXPOSE 8080
 
 LABEL org.opencontainers.image.source="https://github.com/mc9max/seerr"
 LABEL org.opencontainers.image.description="Seerr Railway template"

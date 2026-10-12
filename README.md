@@ -10,7 +10,8 @@ One click. No variables to configure. Railway provisions a single service with a
 
 - **Runtime** — Node.js, single container, SQLite (no external database).
 - **Memory** — light: ~200–400 MB at rest. Fits comfortably on Railway Hobby.
-- **Port** — 5055 (baked into the Docker wrapper).
+- **Port** — 8080, Railway's default service port (the app follows Railway's
+  injected `PORT`; no configuration needed).
 - **Persistence** — the SQLite database and all settings live in `/app/config` on the volume. Survives redeploys and restarts.
 - **Public URL** — auto-assigned by Railway on deploy.
 
